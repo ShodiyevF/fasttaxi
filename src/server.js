@@ -73,6 +73,10 @@ bot.onText(/\Elon Taxi 🚖/, async msg => {
                     if (id2 === id3) {
                         await uniqRow('update elontaxi set taxi_then = $1 where taxi_owner = $2', msg.text, id3)
                         bot.sendMessage(id3, 'Odam sonini kiriting')
+                        bot.on('message', async msg => {
+                            
+                        })
+                        bot.removeListener('message')
                     }
                 })
                 bot.removeListener('message')
